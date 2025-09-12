@@ -1,0 +1,16 @@
+pandas
+tqdm
+pympi-ling
+pynini
+ipykernel
+graphviz
+librosa
+scikit-learn
+pomegranate
+torch
+torchaudio
+torchcodec
+seaborn
+matplotlib
+pytest
+pydot
