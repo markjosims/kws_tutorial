@@ -114,7 +114,7 @@ def get_random_keyword_sentence_pair(
     source_mask = keyword_sentences['file']==keyword_row['sentence_file']
     speaker_mask = keyword_sentences['speaker']==keyword_row['speaker']
     if same_source:
-        return keyword_row, keyword_sentences[source_mask]
+        return keyword_row, keyword_sentences[source_mask].iloc[0]
     if same_speaker:
-        return keyword_row, keyword_sentences[speaker_mask].sample()
-    return keyword_row, keyword_sentences[~speaker_mask].sample()
+        return keyword_row, keyword_sentences[speaker_mask].sample().iloc[0]
+    return keyword_row, keyword_sentences[~speaker_mask].sample().iloc[0]
